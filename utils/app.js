@@ -1,6 +1,11 @@
 
 const consumirApi = async () => {
-    const api = await fetch('https://jsonplaceholder.typicode.com/posts')
-    const data = await api.json()
-    getId(data)
+    try{
+        const api = await fetch('api.json')
+        const data = await api.json()
+        console.log(data)
+    }catch(err){
+        console.log(err)
+    }
 }
+consumirApi()

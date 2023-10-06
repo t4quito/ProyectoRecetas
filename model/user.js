@@ -1,18 +1,18 @@
 const mongoose = require('../utils/database') 
 
+
+//Schema para crear un usuario nuevo
 const userSchema = new mongoose.Schema({
+    idUser: Number,
     username: String,
-    password: String
+    password: String,
+    recipe: [{
+        nombre: String,
+        foto: String,
+        descripcion: String
+    }]
 })
 
-const userModel = mongoose.model('Users', userSchema)
+const userModel = mongoose.model('users', userSchema, 'users')
 
-const userRecipesModel = new mongoose.Schema({
-    username: String,
-    recipe: [String]
-})
-
-const userRecipes = new mongoose.model('userRecipes', userRecipesModel)
-
-module.exports = userRecipes 
 module.exports = userModel
