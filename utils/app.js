@@ -1,13 +1,6 @@
-const cors = require('cors')
-const express = require('express')
-
-const app = express()
-app.use(cors())
 
 const consumirApi = async () => {
-    const api = await fetch('api.json')
+    const api = await fetch('https://jsonplaceholder.typicode.com/posts')
     const data = await api.json()
-    console.log(data)
+    getId(data)
 }
-
-consumirApi()
