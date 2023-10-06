@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../assets/background2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+
+.menu{
+    width: 10%;
+    height: 9%;
+
+    position: fixed;
+    transition: .4s all;
+    z-index: 1;
+    margin-right: 89%;
+}
+
+.menu ul{
+    text-align: center;
+    padding: 0px;
+}
+
+.menu li{
+    transition: .3s all;
+}
+
+.menu a{
+    text-decoration: none;
+    list-style: none;
+    transform: .3s all;
+    font-size: 0px;
+    padding: 0px;
+}
+
+.menu h2{
+    text-align: center;
+    color: white;
+    padding: 7px;
+    padding-bottom: 7px;
+    font-size: 0px;
+}
+
+.menu img{
+    margin:15%;
+}
+
+.menu:hover{
+     width: 25%;
+     height: 100%;
+     background-color: rgba(5, 33, 51, 0.98);
+}
+
+.menu:hover h2{
+    padding: 15px;
+    font-size: 35px;
+}
+
+.menu:hover a{
+    font-size: 20px;    
+    color: white;
+    display: block;
+    padding: 20px;
+}
+
+.menu:hover img{
+    height: 0px;
+}
+
+.menu:hover li{
+     border-top: 1px solid black;
+
+     width: 100%;
+}
+
+.menu:hover ul :last-of-type{
+    border-bottom: 1px solid black;
+}
+
+.menu:hover a:hover{
+    font-size: 25px;
+    padding: 30px 0px;
+    background-color: rgba(22, 78, 112, 0.98);
+}
+
+#contenedor-busqueda{
+    margin-top: 10%;
+    background-color:  white;
+    height: 100px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+#txt-buscar{
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 25px;
+    
+}
+
+
+#btn-buscar{
+    border: none;
+    background-color: tomato;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
