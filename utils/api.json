@@ -1,51 +1,9 @@
-[  {
-    "mealName": "Spaghetti Bolognese",
-    "photo": "https://example.com/spaghetti.jpg",
-    "description": "Classic Italian pasta dish with meat sauce"
-  },
-  {
-    "mealName": "Chicken Parmesan",
-    "photo": "https://example.com/chickenparmesan.jpg",
-    "description": "Breaded chicken topped with marinara sauce and melted cheese"
-  },
-  {
-    "mealName": "Beef Stir Fry",
-    "photo": "https://example.com/beefstirfry.jpg",
-    "description": "Sliced beef cooked with vegetables in a savory sauce"
-  },
-  {
-    "mealName": "Vegetable Curry",
-    "photo": "https://example.com/vegetablecurry.jpg",
-    "description": "A flavorful mix of vegetables in a spicy curry sauce"
-  },
-  {
-    "mealName": "Grilled Salmon",
-    "photo": "https://example.com/grilledsalmon.jpg",
-    "description": "Fresh salmon fillet grilled to perfection"
-  },
-  {
-    "mealName": "Caesar Salad",
-    "photo": "https://example.com/caesarsalad.jpg",
-    "description": "Crisp romaine lettuce with homemade Caesar dressing and croutons"
-  },
-  {
-    "mealName": "Mushroom Risotto",
-    "photo": "https://example.com/mushroomrisotto.jpg",
-    "description": "Creamy Arborio rice cooked with mushrooms and Parmesan cheese"
-  },
-  {
-    "mealName": "BBQ Ribs",
-    "photo": "https://example.com/bbqribs.jpg",
-    "description": "Tender pork ribs glazed with barbecue sauce"
-  },
-  {
-    "mealName": "Greek Gyro",
-    "photo": "https://example.com/greekgyro.jpg",
-    "description": "Grilled lamb or chicken wrapped in a warm pita with tzatziki sauce and vegetables"
-  },
-  {
-    "mealName": "Chocolate Brownie",
-    "photo": "https://example.com/chocolatebrownie.jpg",
-    "description": "Rich and fudgy chocolate brownie topped with vanilla ice cream"
-  }
-]
+
+
+        {
+              "idCategory": "1",
+              "strCategory": "Beef",
+              "strCategoryThumb": "https://www.themealdb.com/images/category/beef.png",
+              "strCategoryDescription": "Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]"
+        }
+

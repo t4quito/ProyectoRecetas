@@ -1,8 +1,6 @@
 const user = require("../model/user")
 const mongoose = require('../utils/database')
 
-
-
 const NewUser = () => {
     try{
         const newuser = new user({
