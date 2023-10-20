@@ -3,13 +3,12 @@ const mongoose = require('../utils/database')
 
 //Schema para crear un usuario nuevo
 const userSchema = new mongoose.Schema({
-    idUser: Number,
-    username: String,
-    password: String,
+    username: {type:String, required:true},
+    password: {type:String, required:true},
     recipe: [{
-        nombre: String,
-        foto: String,
-        descripcion: String
+        nombre: {type:String},
+        foto: {type:String},
+        descripcion: {type:String}
     }]
 })
 

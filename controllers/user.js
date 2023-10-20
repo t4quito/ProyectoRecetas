@@ -1,26 +1,35 @@
-const user = require("../model/user")
-const mongoose = require('../utils/database')
+const userModel = require("../model/user");
 
-const NewUser = () => {
-    try{
-        const newuser = new user({
-            idUser: 1,
-            username:"Bryan",
-            password: "123",
-            recipe: [{
-                nombre: "taco de asada",
-                foto: "foto.com",
-                descripcion: "taco con 20gr de asada"
-            }]
-        })
-        newuser.save()
-        .then(() => console.log("User created"))
-        .catch((err) => console.log(err))
-        .finally(() => mongoose.disconnect())
-    }catch(err){
-        console.log(err)
-    }
+exports.get = async(req, res) => {
+    user = await userModel.findById(req.params.id)
+    console.log(user)
+    res.send('usuario encontrado')
+}
+
+exports.getAll = async(req, res) => {
+    users = await userModel.find()
+    console.log(users)
+    res.send('usuarios encontrados')
+}
+
+exports.create = async (req, res) => {
+    const username = req.params.username
+    const password = req.params.password
+    const user = new userModel({
+        username: username,
+        password: password
+    })
+    await user.save()
+    res.send('usuario creado')
 }
 
 
-NewUser()
+exports.update = async(req, res) => {
+  await userModel.findByIdAndUpdate(req.params.id, req.body)
+  res.send('usuario actualizado')
+}
+
+exports.delete = async (req,res) => {
+    await userModel.deleteOne(req.params.body)
+    res.send("usuario eliminado")
+} 
