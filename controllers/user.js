@@ -1,20 +1,17 @@
 const userModel = require("../model/user");
 
-exports.get = async(req, res) => {
-    user = await userModel.findById(req.params.id)
-    console.log(user)
-    res.send('usuario encontrado')
-}
-
-exports.getAll = async(req, res) => {
-    users = await userModel.find()
-    console.log(users)
-    res.send('usuarios encontrados')
+exports.get = async (req, res) => {
+    const username = req.body.username
+    const password = req.body.password
+    const user =await userModel.find({username: username, password: password})
+    if(user){
+        console.log('logeado')
+    }
 }
 
 exports.create = async (req, res) => {
-    const username = req.params.username
-    const password = req.params.password
+    const username = req.body.username
+    const password = req.body.password
     const user = new userModel({
         username: username,
         password: password
