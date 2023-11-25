@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../../assets/background2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#menu-contenedor{
+    background-color: tomato;
+    width: 30%;
+    height: 50px;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: 35%;
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+}
+
+#recetas{
+    margin-left: 40%;
+    margin-top: 50px;
+}

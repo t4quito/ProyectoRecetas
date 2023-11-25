@@ -1,23 +1,19 @@
+
 const userModel = require("../model/user");
 
-exports.get = async (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
-    const user =await userModel.find({username: username, password: password})
-    if(user){
-        console.log('logeado')
-    }
-}
 
 exports.create = async (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
-    const user = new userModel({
-        username: username,
-        password: password
+    const newuser = await userModel.create({
+        username: "Bryan",
+        password: "123",
+        recipe: [{
+            nombre: 'Pizza Express Margherita',
+            foto: "https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg",
+            descripcion: ' Preheat the oven to 230°C' 
+        }]
     })
-    await user.save()
-    res.send('usuario creado')
+    await newuser.save()
+   
 }
 
 
@@ -26,7 +22,8 @@ exports.update = async(req, res) => {
   res.send('usuario actualizado')
 }
 
-exports.delete = async (req,res) => {
+exports.deleteOne = async (req,res) => {
     await userModel.deleteOne(req.params.body)
     res.send("usuario eliminado")
 } 
+

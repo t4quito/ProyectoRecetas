@@ -1,16 +1,17 @@
 
-const result = document.getElementById('result')
-const searchBtn = document.getElementById('btn-buscar')
-const buscarComida = document.getElementById('txt-buscar')
 
+const searchBtn = document.getElementById('btn-buscar')
+const result = document.getElementById('result')
+const buscarComida = document.getElementById('txt-buscar')
 searchBtn.addEventListener('click', () => {
+ 
   buscarComida.value
   if(buscarComida.length == 0){
     result.innerHTML = 
     `<h3>No puede estar vacio el campo</h3>
     `
   }else{
-   
+
         fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + buscarComida.value)
         .then((response => response.json()))
         .then((data) => {
@@ -38,14 +39,24 @@ searchBtn.addEventListener('click', () => {
             <button id="hide-recipe">X</button>
             <pre id="instructions">${mymeal.strInstructions}</pre>
           </div>
+          <button id="btn-guardar">Guardar receta</button>
           <button id="show-recipe">Ver ingredientes</button>
           `
+
+          const botonGuardar = document.getElementById(`btn-guardar`)
+          
+          botonGuardar.addEventListener("click",() => {
+            console.log(mymeal.strMeal)
+            console.log(mymeal.strInstructions)
+            console.log(mymeal.strMealThumb)
+          })
+        
           let ingredientCon = document.getElementById('ingredient-con')
           let parent = document.createElement('ul')
           let recipe = document.getElementById('recipe')
           let hideRecipe = document.getElementById('hide-recipe')
           let showRecipe = document.getElementById('show-recipe')
-      
+          
           ingredients.forEach((i) => {
             let child = document.createElement("li")
             child.innerText = i
@@ -65,4 +76,3 @@ searchBtn.addEventListener('click', () => {
     };
   }
 )
-
